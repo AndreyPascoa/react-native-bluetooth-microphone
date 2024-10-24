@@ -1,38 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
 
-# react-native-bluetooth-microphone
+<h1>react-native-bluetooth-microphone</h1>
 
-## Getting started
+<h2>Getting Started</h2>
 
-`$ npm install react-native-bluetooth-microphone --save`
+<h3>Installation</h3>
+<pre>
+<code>
+$ npm install react-native-bluetooth-microphone --save
+</code>
+</pre>
 
-### Mostly automatic installation
+<h3>Automatic Installation</h3>
+<pre>
+<code>
+$ react-native link react-native-bluetooth-microphone
+</code>
+</pre>
 
-`$ react-native link react-native-bluetooth-microphone`
+<h3>Manual Installation</h3>
 
-### Manual installation
+<h4>Android</h4>
 
+<ol>
+    <li>
+        Open <code>android/app/src/main/java/[...]/MainActivity.java</code>
+        <ul>
+            <li>Add the following import at the top of the file:</li>
+            <pre><code>import br.com.codificar.pacote_a_criar.RNBluetoothMicrophonePackage;</code></pre>
+            <li>Add <code>new RNBluetoothMicrophonePackage()</code> to the list returned by the <code>getPackages()</code> method.</li>
+        </ul>
+    </li>
+    <li>
+        Append the following lines to <code>android/settings.gradle</code>:
+        <pre><code>
+include ':react-native-bluetooth-microphone'
+project(':react-native-bluetooth-microphone').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-bluetooth-microphone/android')
+        </code></pre>
+    </li>
+    <li>
+        Inside the <code>dependencies</code> block in <code>android/app/build.gradle</code>, insert the following line:
+        <pre><code>
+compile project(':react-native-bluetooth-microphone')
+        </code></pre>
+    </li>
+</ol>
 
-#### Android
+<h2>Usage</h2>
 
-1. Open up `android/app/src/main/java/[...]/MainActivity.java`
-  - Add `import br.com.codificar.pacote_a_criar.RNBluetoothMicrophonePackage;` to the imports at the top of the file
-  - Add `new RNBluetoothMicrophonePackage()` to the list returned by the `getPackages()` method
-2. Append the following lines to `android/settings.gradle`:
-  	```
-  	include ':react-native-bluetooth-microphone'
-  	project(':react-native-bluetooth-microphone').projectDir = new File(rootProject.projectDir, 	'../node_modules/react-native-bluetooth-microphone/android')
-  	```
-3. Insert the following lines inside the dependencies block in `android/app/build.gradle`:
-  	```
-      compile project(':react-native-bluetooth-microphone')
-  	```
-
-
-## Usage
-```javascript
+<pre>
+<code>
 import RNBluetoothMicrophone from 'react-native-bluetooth-microphone';
 
 // TODO: What to do with the module?
 RNBluetoothMicrophone;
-```
-  
+</code>
+</pre>
+
+</body>
+</html>
