@@ -20,3 +20,11 @@ const Microphone = NativeModules.Microphone
 export function multiply(a: number, b: number): Promise<number> {
   return Microphone.multiply(a, b);
 }
+
+export function startBluetoothSco(): Promise<string> {
+  return Microphone.startBluetoothSco();
+}
+
+export function stopBluetoothSco(): Promise<string> {
+  return Microphone.stopBluetoothSco();
+}

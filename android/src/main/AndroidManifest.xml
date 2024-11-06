@@ -1,3 +1,8 @@
-<manifest xmlns:android="http://schemas.android.com/apk/res/android"
-          package="com.microphone">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+  <uses-permission android:name="android.permission.BLUETOOTH" />
+  <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+  <uses-permission android:name="android.permission.BLUETOOTH_CONNECT" />
+  <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+  <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
 </manifest>
