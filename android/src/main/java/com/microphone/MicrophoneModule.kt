@@ -100,7 +100,7 @@ class MicrophoneModule(reactContext: ReactApplicationContext) : ReactContextBase
               Log.e("BluetoothSCO", "Falha ao ativar Bluetooth SCO.")
               promise.reject("SCO_ERROR", "Falha ao ativar Bluetooth SCO.")
             }
-          }, 3000)
+          }, 1000)
         } catch (e: SecurityException) {
           Log.e("BluetoothSCO", "Erro de permissão ao iniciar Bluetooth SCO: ${e.message}")
           promise.reject("SCO_PERMISSION_ERROR", "Erro de permissão ao iniciar Bluetooth SCO: ${e.message}")
